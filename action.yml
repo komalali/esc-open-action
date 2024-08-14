@@ -1,24 +1,15 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
-
-# Add your action's branding here. This will appear on the GitHub Marketplace.
-branding:
-  icon: 'heart'
-  color: 'red'
-
-# Define your inputs here.
+name: ESC Open Action
+description: Open an ESC environment and project all environment variables to be used in future commands of the workflow
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  environment:
+    description: The environment to open
     required: true
-    default: '1000'
-
-# Define your outputs here.
 outputs:
-  time:
-    description: 'Your output description here'
-
+  environment:
+    description: 'The environment that was opened'
+  output:
+    description: Output from running the command
 runs:
-  using: node20
-  main: dist/index.js
+  using: 'node20'
+  main: 'dist/index.js'
+
